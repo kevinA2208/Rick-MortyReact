@@ -10,8 +10,9 @@ export const RickMortyMain = () => {
     const funFetch = () =>{
 
         const input = document.getElementById('input1')
+        const url = 'https://rickandmortyapi.com/api/character/?name='+input.value
 
-        fetch('https://rickandmortyapi.com/api/character/?name='+input.value)
+        fetch(url)
         .then(response => response.json())
         .then(res =>{
             
@@ -31,12 +32,14 @@ export const RickMortyMain = () => {
             <div>
                 <Input id="input1" evento={validacion}/>
             </div>
-            {character.map((index, key) => (
-                <div>
-                    <h2>{character.name}</h2>
-                </div>
-            ))
-            }
+            {character.map((index, key) => {
+                return(
+                    <div>
+                        <h2>{character.name}</h2>
+                    </div>
+                )
+            })
+        }
         </div>
 
   )
