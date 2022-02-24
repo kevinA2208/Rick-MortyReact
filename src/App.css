@@ -1,0 +1,55 @@
+body{
+    background-color: rgb(58, 217, 238);
+}
+
+#banner{
+    width: 100%;
+}
+
+#main-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#characters{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 110px;
+    margin-right: 50px;
+    background-color:rgb(29, 29, 29);
+    color: white;
+    text-align: center;
+}
+
+
+#char-img{
+    width: 300px;
+    border: 2px solid black;
+}
+
+#inputDiv{
+    display: flex;
+    justify-content: center;
+    
+}
+
+#input1{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width:400px;
+    height:30px;
+    background-color:rgb(29, 29, 29);
+    color: white;
+    border: 1px solid rgb(156, 245, 55);
+    text-align: center;
+    font-size: 20px;
+}
+
+hr{
+    border: none;
+    height:1.3px;
+    width:1500px;
+    background-color:black;
+}

@@ -29,18 +29,30 @@ export const RickMortyMain = () => {
 
     return (
         <div>
-            <div>
-                <Input id="input1" evento={validacion}/>
+            <div id="inputDiv">
+                    <Input id="input1" evento={validacion}/>
+                </div>
+                <hr id="hrinput"></hr>
+            <div id="main-container">
+                {character.map((index, key) => {
+                    return(
+                        <div id="characters">
+                            <div>
+                                <img src={index.image} id="char-img" alt=""/>
+                            </div>
+                            <div>
+                                <h3>Nombre: </h3>
+                                <h2>{index.name}</h2>
+                                <h3>Estado: {index.status}</h3>  
+                            </div>
+                            
+                        </div>
+                    )
+                })
+            }
             </div>
-            {character.map((index, key) => {
-                return(
-                    <div>
-                        <h2>{character.name}</h2>
-                    </div>
-                )
-            })
-        }
         </div>
+        
 
   )
 }
