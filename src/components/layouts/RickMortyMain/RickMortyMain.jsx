@@ -14,10 +14,7 @@ export const RickMortyMain = () => {
 
         fetch(url)
         .then(response => response.json())
-        .then(res =>{
-            
-            setCharacter(res.results)
-        })
+        .then(res =>setCharacter(res.results))
     }
 
 
@@ -34,8 +31,11 @@ export const RickMortyMain = () => {
             </div>
             {character.map((index, key) => {
                 return(
-                    <div>
-                        <h2>{character.name}</h2>
+                    <div id='container-char'>
+                        <h3>Nombre:</h3>
+                        <h2>{index.name}</h2>
+                        <h3>Estado:</h3>
+                        <h3>{index.state}</h3>
                     </div>
                 )
             })
